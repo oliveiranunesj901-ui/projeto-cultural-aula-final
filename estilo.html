@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Moda e Esporte da Quebrada</title>
 </head>
+
 <body>
 
     <h1>Formulário de Estilo e Esportes</h1>
     <p>Responda para ajudar no mapeamento de tendências urbanas</p>
 
     <p>
-        <a href="index.html">🏠 Início / Textos</a> | 
-        <a href="cultura.html">🎵 Música e Culinária (Tabelas)</a> | 
+        <a href="index.html">🏠 Início / Textos</a> |
+        <a href="cultura.html">🎵 Música e Culinária (Tabelas)</a> |
         <a href="estilo.html">👟 Moda e Esporte (Formulários)</a>
     </p>
 
@@ -19,9 +21,9 @@
 
     <div>
         <h2>Formulário de Cadastro de Tendências</h2>
-        
+
         <form oninput="resultadoNota.value = notaEstilo.value">
-            
+
             <p>
                 <label for="nome">Nome Completo ou Vulgo:</label><br>
                 <input type="text" id="nome" name="nome" placeholder="Ex: Mc Lipinho">
@@ -39,16 +41,16 @@
 
             <p>
                 <label>Quais esportes e lazer você pratica na quebrada? (Marque quantos quiser)</label><br>
-                
+
                 <input type="checkbox" id="esp1" name="esportes" value="futebol">
                 <label for="esp1">Futebol de Várzea / Quadra</label><br>
-                
+
                 <input type="checkbox" id="esp2" name="esportes" value="skate">
                 <label for="esp2">Skate / Patins</label><br>
-                
+
                 <input type="checkbox" id="esp3" name="esportes" value="basquete">
                 <label for="esp3">Basquete de Rua</label><br>
-                
+
                 <input type="checkbox" id="esp4" name="esportes" value="passinho">
                 <label for="esp4">Dança / Passinho</label>
             </p>
@@ -65,13 +67,46 @@
                 </datalist>
             </p>
 
-            
 
+            <label for="instituicao">Onde voce focva seus estudos?</label><br>
+            <select id="instituicao" name="instituicao">
+                <optgroup label="Ensino Técnico e Regular">
+                    <option value="escola-publica">Escola Pública Estadual</option>
+                    <option value="etec">Escola Técnica</option>
+
+                </optgroup>
+
+                <optgroup label="Projetos e Ensino Superior">
+                    <option value="ong">Fábricas de cultura/ONG Local</option>
+                    <option value="cursinho">cursinho Popular</option>
+
+                </optgroup>
+            </select>
+            </p>
+            <label for="acessorio">Qual acessório completa seu kit?</label><br>
+            <select id="acessorio" name="acessorio" multiple size="4">
+                <option value="boné">Boné</option>
+                <option value="pulseira">Pulseira</option>
+                <option value="colar">Colar</option>
+                <option value="brinco">Brinco</option>
+            </select>
+
+        </p>
+        <p>
+            <label for="notaEstilo">de 0 á 10, o quanto a moda representa
+                 a sua indentidade?</label><br>
+                 <input type="range" id="notaEstilo" name="notaEstilo" min="0" max="10">
+                 <span>nota selecionada:
+<output name="resultadoNota" for="notaEstilo">5</output>
+                 </span>
+            
+        </p>
         </form>
-    </div>
+        
 
     <hr>
     <p>Aula de HTML Básico - Criado com a Quebrada</p>
 
 </body>
+
 </html>
